@@ -82,12 +82,12 @@ ele.innerHTML = curentQuizData.answers[index];
 }
 
 
-// what happend in click answer
+// what happend when user click  the any answer
 
 allBtn.forEach((ele,index) => {
 ele.addEventListener('click', () => {
 
-  if (allBtn.indexOf(ele) ==  questions[currentQuiz].correctAnswerIndex) {
+  if (allBtn.indexOf(ele) ==  questions[currentQuiz].correctAnswerIndex) {   // what happend when user click  the correct answer
 let score = document.getElementById('score');
    score.innerHTML =  scoreNum +1 ;
     scoreNum++;
