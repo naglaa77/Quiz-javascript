@@ -61,17 +61,18 @@ for(let i = 0; i <4; i++) {
 
 createBtnAnswer ();
 
+// select all button in array by spread operator
 let allBtn = [...document.querySelectorAll('.answer')];
 
-let currentQuiz = 0;
-let scoreNum = 0;
+let currentQuiz = 0;     // i refere to the first question to appeare and after that i will increase it by one
+let scoreNum = 0;        // i refere to number of score when user select a correct answer
 loadQuiz();
 
-// to generate the questions and answers
+// to generate the questions and answers in their position
 function loadQuiz() {
 
-const curentQuizData = questions[currentQuiz]; 
-questionEl.innerText = curentQuizData.question; //question
+const curentQuizData = questions[currentQuiz];                        // selecte the first ele in array questions
+questionEl.innerText = curentQuizData.question;                       //selecte the question index 
 
 allBtn.forEach((ele,index) => {
 ele.innerHTML = curentQuizData.answers[index];
